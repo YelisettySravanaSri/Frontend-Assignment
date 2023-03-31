@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login page</title>
+<style type="text/css">
+h1{
+font-size: 70px;
+}
+label {
+	font-size: 20px;
+}
+form{
+width:500px;
+ float:left;
+ color:white;
+ border: solid 5px;
+ margin-top: 32px;
+ margin-right:20px;
+ margin-left: 100px;
+ margin-bottom: 100px;
+ padding-top: 110px;
+ padding-bottom: 110px;
+ background-color: threedlightshadow;
+ color: white;
+ 
+}
+#pic{
+float:left;
+height:550px;
+width:50%;
+border-radius: 500px 0px 400px 0px;
+}
+#status{
+    color: white;
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+}
+#visible{
+    transform: rotateY(0deg);
+     width: 20px;
+    border-radius: 100%;
+    border: 2px solid royalblue;
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+    cursor: pointer;
+    margin-top: 362px;
+    margin-right: 150px;
+}
+#visible:hover{
+    transform: rotateY(360deg);
+    background-image: url("./students.png");
+}
+#status{
+    color: red;
+}
+</style>
+</head>
+<body style = "background-color: teal;">
+<img src="clfr.jpg" id="pic">
+<center>
+   <h1> Login Form</h1>
+   <div>
+   <form action="">
+   <label> Enter the mailId </label>&nbsp;&nbsp;&nbsp;
+   <input type="email" id="userEmail"><br><br>
+   <label> Enter the Password </label>
+   <input type="password" id="userPass">
+   <img id="visible" src="eye.jpg" onmousedown="visiblePass()" onmouseup="inVisiblePass()">
+   <br><br>
+   <span id="status"></span>
+   <input id="loginbut" type="button" value="Login" onclick="accesstopage()">&nbsp;&nbsp;
+   <a href = "pwdpg.html"><input id="New" type="button" value="Forgot Password"></a>
+   </form>
+   </div>
+</center>
+<script type="text/javascript" src="./Login.js"></script>
+</body>
+</html>
